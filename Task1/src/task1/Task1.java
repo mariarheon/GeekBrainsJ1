@@ -28,6 +28,7 @@ public class Task1 {
         System.out.println("t4: " + checkLess(a));
         greet(str);
         leapYear(year);
+
     }
     
     static int calculate(int a, int b, int c, int d){
@@ -39,9 +40,7 @@ public class Task1 {
     }
     
     static boolean checkBorder(int a, int b){
-        if (a+b >= 10 && a+b <= 20) 
-            return true;
-        return false;
+        return (a+b >= 10 && a+b <= 20);
     }
     
     static void checkMoreLess(int a){
@@ -51,9 +50,7 @@ public class Task1 {
     }
     
     static boolean checkLess(int a){
-        if (a<0)
-            return true;
-        return false;
+        return (a<0);
     }
     
     static void greet(String a){
@@ -61,7 +58,7 @@ public class Task1 {
     }
     
     static void leapYear(int year){
-        if (year%4 == 0 && year%100 !=0 || year%400 == 0)
+        if (year%4 == 0 && year%100 != 0 || year%400 == 0)
             System.out.println("t6: leap year");    
         else System.out.println("t6: not a leap year");
     }
