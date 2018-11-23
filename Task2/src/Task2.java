@@ -8,7 +8,7 @@ import java.util.Arrays;
 
 /**
  *
- * @author Univer
+ * @author Maria Mikhaleva
  */
 public class Task2 {
 
