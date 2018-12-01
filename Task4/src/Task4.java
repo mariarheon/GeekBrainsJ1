@@ -1,13 +1,7 @@
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  * Java. Level 1. Lesson 4. Homework/
@@ -33,6 +27,7 @@ class Task4  {
     
     void game(){
         initMap();
+        printMap();
         while(true){
             humanTurn();
             printMap();
@@ -65,9 +60,11 @@ class Task4  {
     }
     
     void printMap(){
-        for (int i = 0; i < SIZE; i++)
+        for (int i = 0; i < SIZE; i++){
             for(int j = 0; j < SIZE; j++)
-                System.out.println(map[i][j]);
+                System.out.print(map[i][j] + " ");
+             System.out.println();
+        }
     }
     
    
@@ -76,7 +73,7 @@ class Task4  {
         do{
             System.out.printf("Enter x and y (1..%d) \n", SIZE);
             x = sc.nextInt() - 1;
-            y = sc.nextInt() - 1;//exception
+            y = sc.nextInt() - 1;
         } while(!isCellValid(x, y));
          map[x][y] = DOT_X;
     }
